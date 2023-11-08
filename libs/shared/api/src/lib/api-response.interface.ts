@@ -7,6 +7,6 @@ export interface ApiMetaInfo
 
 export interface ApiResponse<T> 
 {
-    result?:T[] |T
-    Info :ApiMetaInfo
+    results?:T[] |T
+    info :ApiMetaInfo
 }
