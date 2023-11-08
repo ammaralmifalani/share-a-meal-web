@@ -17,21 +17,21 @@ export class ApiResponseInterceptor implements NestInterceptor {
         next: CallHandler
     ): Observable<ApiResponse<unknown>> {
         return next.handle().pipe(
-            map((results) => {
-                if (results) {
+            map((result) => {
+                if (result) {
                     return {
-                        results,
-                        info: {
+                        result,
+                        Info: {
                             version: '1.0',
-                            type: results instanceof Array ? 'list' : 'object',
+                            type: result instanceof Array ? 'list' : 'object',
                             count:
-                                results instanceof Array ? results.length : 1,
+                                result instanceof Array ? result.length : 1,
                         },
                     };
                 } else {
                     return {
-                        results: undefined,
-                        info: {
+                        result: undefined,
+                        Info: {
                             version: '1.0',
                             type: 'none',
                             count: 0,
