@@ -1,6 +1,6 @@
 <p>meal-list works!</p>
 <div *ngFor = "let meal of meals">
     <h2>{{meal.title}}</h2>
-    <p>Beschrijving: {{meal.description}}</p>
-    <p>Served: {{meal.dataServed | date : 'long'}}</p>
+    <p>Beschrijving: {{meal.description}}</p> 
+   <p>Served: {{meal.dateServed | date : 'long'}}</p> 
 </div>

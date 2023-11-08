@@ -47,8 +47,8 @@ export class MealService {
             id: `meal-${Math.floor(Math.random() * 10000)}`,
             isVega: false,
             dateServed: new Date(),
-          sort:MealSort.Breakfast,
-          cook:'1',
+            sort:MealSort.Breakfast,
+            cook:'1',
         };
         this.meals$.next([...current, newMeal]);
         return newMeal;
