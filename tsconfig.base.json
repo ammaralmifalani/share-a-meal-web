@@ -25,6 +25,9 @@
       "@avans-nx-workshop/share-a-meal/features": [
         "libs/share-a-meal/features/src/index.ts"
       ],
+      "@avans-nx-workshop/share-a-meal/user": [
+        "libs/share-a-meal/user/src/index.ts"
+      ],
       "@avans-nx-workshop/shared/api": ["libs/shared/api/src/index.ts"],
       "@avans-nx-workshop/ui": ["libs/share-a-meal/ui/src/index.ts"]
     }

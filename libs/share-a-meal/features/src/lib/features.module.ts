@@ -6,18 +6,23 @@ import { MealDetailComponent } from './meal/meal-detail/meal-detail.component';
 import { MealService } from './meal/meal.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
-const routes : Routes =[
+import { DashboardComponent } from './dashboard/dashboard.component';
+const routes: Routes = [
   {
     path: '',
-    pathMatch : 'full',
-    component:MealListComponent
+    pathMatch: 'full',
+    component: MealListComponent,
   },
-
 ];
 @NgModule({
-  imports: [RouterModule.forChild(routes),CommonModule, HttpClientModule],
-  declarations: [MealListComponent, MealDetailComponent, AboutComponent],
+  imports: [RouterModule.forChild(routes), CommonModule, HttpClientModule],
+  declarations: [
+    MealListComponent,
+    MealDetailComponent,
+    AboutComponent,
+    DashboardComponent,
+  ],
   providers: [MealService],
-  exports: [MealDetailComponent, MealListComponent,AboutComponent],
+  exports: [MealDetailComponent, MealListComponent, AboutComponent],
 })
 export class FeaturesModule {}
