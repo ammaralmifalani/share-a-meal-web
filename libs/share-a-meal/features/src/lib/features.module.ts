@@ -9,10 +9,25 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
-    path: '',
+    path: 'meals',
     pathMatch: 'full',
     component: MealListComponent,
   },
+  {
+    path:'', 
+    pathMatch:'full',
+    redirectTo:'dashboard',
+},
+{
+    path:'dashboard', 
+    pathMatch:'full',
+    component:DashboardComponent
+},
+{
+  path:'about', 
+  pathMatch:'full',
+  component:AboutComponent
+},
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes), CommonModule, HttpClientModule],

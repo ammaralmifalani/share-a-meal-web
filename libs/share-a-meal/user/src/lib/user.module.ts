@@ -7,9 +7,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 const routes :Routes= [
 {
-  path: 'users',
+  path: '',
   pathMatch: 'full',
   component: UserListComponent
+},
+{
+  path: ':id',
+  pathMatch: 'full',
+  component: UserDetailComponent
 }
 ]
 @NgModule({
